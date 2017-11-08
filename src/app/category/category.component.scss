@@ -1,0 +1,36 @@
+.category{
+  position: relative;
+  display:grid;
+  min-height: 250px;
+  border-radius: 5px;
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(http://periciagroup.com/events/wp-content/uploads/2016/08/3320048245773c02bad8c66.01674891.jpg)
+
+}
+p{
+  z-index: 1000;
+  transition: 0.5s ease;
+
+  color:white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-decoration: none; /* no underline */
+  font-size: 2em;
+  background-color:#df691a;
+
+}
+a:hover .layer {
+  transition: 0.5s ease;
+  background-color: rgba(43, 62, 80, 0.0);
+}
+.layer {
+  transition: 0.5s ease;
+    background-color: rgba(43, 62, 80, 0.50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

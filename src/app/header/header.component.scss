@@ -1,0 +1,20 @@
+.Nav{
+  font-family: 'Asap Condensed', sans-serif;
+  margin:auto;
+  width:20%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  min-height: 80px;
+  display:grid;
+  grid-column: 1fr 2fr 1fr;
+}
+.Nav h1 {
+  margin-top:-10px;
+font-size: 6em;
+}
+.Nav h2 {
+  margin-top:-5px;
+  line-height: 0;
+  margin-bottom: 28px;
+font-size: 4em;
+}
