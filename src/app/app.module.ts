@@ -8,7 +8,9 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { PlayerComponent } from './player/player.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryService } from './category.service';
-
+import { GetCurrent4chanService } from './GetCurrent4chan.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Http,HttpModule} from '@angular/http';
 const appRoutes: Routes = [
   { path: 'Categories', component: CategoryListComponent },
   { path: 'Player/:id',      component: PlayerComponent },
@@ -27,12 +29,13 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     )
   ],
-  providers: [CategoryService],
+  providers: [CategoryService,GetCurrent4chanService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

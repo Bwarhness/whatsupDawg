@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Category } from '../models/category'
+import { CategoryService } from '../category.service'
+
 import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'app-player',
@@ -7,13 +10,16 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./player.component.scss']
 })
 export class PlayerComponent implements OnInit {
-skip:number;
+currentCategory:Category;
+skip:number = 0;
   constructor(  private route: ActivatedRoute,
-    private router: Router) { }
+    private router: Router, private CategoryService: CategoryService) { }
 
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id');
-    alert(id);
+    var res = this.CategoryService.getSingleCategory(id);
+    this.currentCategory = res;
+    console.log(this.currentCategory);
   }
 
 }
