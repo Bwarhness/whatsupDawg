@@ -10,6 +10,10 @@ export class CategoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (this.selectedCategory.sub === undefined) {
+this.selectedCategory.sub = "no text";
+
+    }
   }
 
 }

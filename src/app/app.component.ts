@@ -9,11 +9,9 @@ import { Http, } from '@angular/http';
 })
 export class AppComponent implements OnInit{
   title = 'Time404';
-  constructor(private GetCurrent4chanService: GetCurrent4chanService,private http: Http) { }
-ngOnInit(){
-  alert("bla")
-  // Make the HTTP request:
-  this.http.get('http://a.4cdn.org/b/2.json').subscribe(res => console.log(res.json()))
+  constructor() {
 
+  }
+ngOnInit(){
   }
 }
