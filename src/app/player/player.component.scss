@@ -12,11 +12,16 @@ p{
   margin: 0;
 }
 .grid{
+  height: 85vh;
   display:grid;
   grid-template-columns: 1fr 3fr 1fr;
 }
 .grid div{
+  max-height: 90vh;
   position: relative;
+}
+.grid .rating{
+  height:100%;
 }
 .grid span{
   font-size: 5em;

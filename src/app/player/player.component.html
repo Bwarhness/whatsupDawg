@@ -1,15 +1,15 @@
-
+<br>
 <div class="grid">
-    <div class="text-center tdown" (click)="prev()">
+    <div class="text-center tdown rating" (click)="prev()">
         <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
       </div>
-      <div class="">
+      <div class="text-center">
         <p class="text-center">{{CurrentVideo.filename}}</p>
-          <video controls autoplay style="width:100%">
+          <video controls autoplay style="max-height:100%; min-height:60%" id="myVideo" (ended)="next()">
             <source src="http://i.4cdn.org/gif/{{CurrentVideo.tim}}.webm" type="video/webm">
           </video>
       </div>
-      <div class="text-center tup" (click)="next()">
+      <div class="text-center tup rating" (click)="next()">
 
         <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
       </div>
