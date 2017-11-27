@@ -6,15 +6,16 @@ export class GetCurrent4chanService {
   Stuff:any;
 
   constructor(private http: Http) {
-    // Make the HTTP request:
-    const headers = new Headers();
-        headers.append('Accept', 'application/json');
-        headers.append('Access-Control-Allow-Origin', '*');
-        headers.append('Access-Control-Allow-Headers', '*');
-
-    let options = new RequestOptions({ headers: headers });
-    this.http.get('http://a.4cdn.org/gif/catalog.json',options).subscribe(res => {
-    this.Stuff = res.json();
-    });
+  }
+  GetStuff(){
+    var bla = false
+     this.http.get('http://a.4cdn.org/gif/catalog.json').subscribe(res => {
+      this.Stuff = res.json();
+      bla =  true
+      }, err => {
+        bla = false
+      }
+    );
+    return bla;
   }
 }
