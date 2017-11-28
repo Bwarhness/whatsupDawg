@@ -10,11 +10,14 @@ import { BrowserPlatformLocation } from '@angular/platform-browser/src/browser/l
 })
 export class AppComponent implements OnInit{
   title = 'Time404';
-  ready:boolean = false;
+  ready = this.chanService.Threads.length;
   constructor(private chanService:GetCurrent4chanService) {
 
   }
 ngOnInit(){
-  this.ready = this.chanService.GetStuff();
+  console.log(this.ready);
+  }
+  test(){
+    console.log(this.ready);
   }
 }

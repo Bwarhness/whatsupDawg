@@ -2,9 +2,10 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet">
 </head>
+<h1 (click)="test()">asdas</h1>
 <app-header></app-header>
 
 
 <div class="container-fluid">
-    <router-outlet></router-outlet>
+    <router-outlet *ngIf="ready"></router-outlet>
 </div>
