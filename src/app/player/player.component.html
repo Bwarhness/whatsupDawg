@@ -1,5 +1,7 @@
 <br>
+<button ngxClipboard [cbContent]="src" class="btn btn-success btn-block">Share</button>
 <div class="grid">
+  <input hidden  value="{{src}}">
     <div class="text-center tdown rating" (click)="prev()">
         <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
       </div>
