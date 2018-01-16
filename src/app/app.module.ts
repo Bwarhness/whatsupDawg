@@ -14,8 +14,6 @@ import { Http,HttpModule} from '@angular/http';
 import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { BoardServiceService } from './board-service.service';
-
-
 const appRoutes: Routes = [
   { path: 'Categories', component: CategoryListComponent },
   { path: 'Player/:id',      component: PlayerComponent },
