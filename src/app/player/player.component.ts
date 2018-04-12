@@ -60,13 +60,13 @@ setvideo(){
     this.CurrentVideo["filename"] = "Sup"
   this.ready = true;
   var myVideo = document.getElementsByTagName('video')[0];
-  this.src = "http://i.4cdn.org/"+ this.boardService.Board+"/"+this.CurrentVideo.tim+".webm"
+  this.src = "//i.4cdn.org/"+ this.boardService.Board+"/"+this.CurrentVideo.tim+".webm"
   myVideo.load();
   myVideo.play();
 }
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id');
-    this.http.get("http://a.4cdn.org/"+ this.boardService.Board +"/thread/"+id+".json").toPromise().then(res => {
+    this.http.get("//a.4cdn.org/"+ this.boardService.Board +"/thread/"+id+".json").toPromise().then(res => {
     this.Videos =  res["posts"].filter(p => p["ext"] == ".webm");
     this.setvideo();
     });

@@ -14,8 +14,7 @@ import { Http,HttpModule} from '@angular/http';
 import { NgModel } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { BoardServiceService } from './board-service.service';
-
-
+import { ClipboardModule } from 'ngx-clipboard';
 const appRoutes: Routes = [
   { path: 'Categories', component: CategoryListComponent },
   { path: 'Player/:id',      component: PlayerComponent },
@@ -33,6 +32,7 @@ const appRoutes: Routes = [
     PlayerComponent,
   ],
   imports: [
+    ClipboardModule,
     FormsModule,
     BrowserModule,
     HttpModule,

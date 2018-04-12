@@ -6,6 +6,8 @@ import { BrowserPlatformLocation } from '@angular/platform-browser/src/browser/l
 import { BoardServiceService } from './board-service.service';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

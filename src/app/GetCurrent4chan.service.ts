@@ -13,7 +13,7 @@ export class GetCurrent4chanService {
   }
   getstuff(){
     this.Threads = [];
-     this.http.get('http://a.4cdn.org/'+ this.boardService.Board + '/catalog.json').toPromise().then(
+     this.http.get('//a.4cdn.org/'+ this.boardService.Board + '/catalog.json').toPromise().then(
        res => {
          var test = res.json();
         for (let i = 0; i < test.length; i++) {
