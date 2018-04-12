@@ -7,12 +7,21 @@ import { Category } from '../models/category';
 })
 export class CategoryComponent implements OnInit {
 @Input() selectedCategory;
+Title:string;
   constructor() { }
 
   ngOnInit() {
-    if (this.selectedCategory.sub === undefined) {
-this.selectedCategory.sub = "no text";
+    if (this.selectedCategory.sub === undefined && this.selectedCategory.com === undefined) {
+    this.Title = "no text";
 
+    }
+    else if (this.selectedCategory.sub === undefined)
+    {
+    this.Title = this.selectedCategory.com;
+    }
+    else{
+    this.Title = this.selectedCategory.sub;
+    
     }
   }
 
